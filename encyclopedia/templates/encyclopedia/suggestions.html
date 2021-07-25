@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block body %}
+    <ul>
+       
+    {% for suggestion in suggestions %}
+	<li><a href = "{% url 'encyclopedia:test' suggestion %}">{{suggestion}}</a></li>
+	{%endfor%}
+	
+	</ul>
+    
+{% endblock %}
